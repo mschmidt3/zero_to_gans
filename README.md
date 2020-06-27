@@ -1,7 +1,8 @@
 ## Zero to GANs  Course Project
 
 Links
-* https://www.kaggle.com/mschmidt3/zero-to-gans-project
+* https://mschmidt3.github.io/zero_to_gans/  - this file
+* https://www.kaggle.com/mschmidt3/zero-to-gans-project - the kaggle notebook
 
 Selected Dataset: 
 * intel image classification
