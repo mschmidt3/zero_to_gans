@@ -34,7 +34,9 @@ Not all Images in the dataset have the same dimensions. This must be fixed befor
 ...
 history = [evaluate(model, valid_dl)]
 ´´´
+
 The call of evaluate results in
+
 ´´´
 --------------------------------------------------------------------------
 RuntimeError                              Traceback (most recent call last)
@@ -66,7 +68,8 @@ Original Traceback (most recent call last):
 RuntimeError: stack expects each tensor to be equal size, but got [3, 150, 150] at entry 0 and [3, 141, 150] at entry 241
 ´´´
 
-After adding `tt.Resize(150)` to the Compose function did not fix the rrror.
+Adding `tt.Resize(150)` to the Compose function did not fix the error.
+
 ´´´
 stats = ((0.43531275, 0.46185786, 0.4556407), (0.26646963, 0.26392624, 0.29387024))
 train_tfms = tt.Compose([tt.RandomCrop(32, padding=4, padding_mode='reflect'), 
@@ -75,3 +78,9 @@ train_tfms = tt.Compose([tt.RandomCrop(32, padding=4, padding_mode='reflect'),
                          tt.ToTensor(), 
                          tt.Normalize(*stats,inplace=True)])
 ´´´
+
+Adding `tt.Resize( (150,150) )`  did. 
+Take care: `tt.Resize( (150,150) )` must be added to `tran_tfmd` and to `valid_tmfs`
+
+
+
