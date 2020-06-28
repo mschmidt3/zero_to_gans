@@ -28,6 +28,8 @@ The goal is to train an convolutional network based on this data.
 
 ## Lessons learned so far
 
+### perpare the data
+
 Not all Images in the dataset have the same dimensions. This must be fixed before training.
 
 ```
@@ -84,4 +86,7 @@ Adding `tt.Resize( (150,150) )`  did.
 Take care: `tt.Resize( (150,150) )` must be added to `tran_tfmd` and to `valid_tmfs`
 
 
+### get better results.
 
+1. `tt.Normalize(*stats ...)` does not improve the result significantly
+1. adding another liniar layer did not have the the expected effect
