@@ -33,6 +33,7 @@ Not all Images in the dataset have the same dimensions. This must be fixed befor
 ´´´
 ...
 history = [evaluate(model, valid_dl)]
+
 ´´´
 
 The call of evaluate results in
