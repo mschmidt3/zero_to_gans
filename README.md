@@ -30,15 +30,15 @@ The goal is to train an convolutional network based on this data.
 
 Not all Images in the dataset have the same dimensions. This must be fixed before training.
 
-´´´
+```
 ...
 history = [evaluate(model, valid_dl)]
+```
 
-´´´
 
 The call of evaluate results in
 
-´´´
+```
 --------------------------------------------------------------------------
 RuntimeError                              Traceback (most recent call last)
 <ipython-input-19-1c4791c5f87e> in <module>
@@ -67,18 +67,18 @@ Original Traceback (most recent call last):
   File "/opt/conda/lib/python3.7/site-packages/torch/utils/data/_utils/collate.py", line 55, in default_collate
     return torch.stack(batch, 0, out=out)
 RuntimeError: stack expects each tensor to be equal size, but got [3, 150, 150] at entry 0 and [3, 141, 150] at entry 241
-´´´
+```
 
 Adding `tt.Resize(150)` to the Compose function did not fix the error.
 
-´´´
+```
 stats = ((0.43531275, 0.46185786, 0.4556407), (0.26646963, 0.26392624, 0.29387024))
 train_tfms = tt.Compose([tt.RandomCrop(32, padding=4, padding_mode='reflect'), 
                          tt.RandomHorizontalFlip(), 
                          tt.Resize(150),
                          tt.ToTensor(), 
                          tt.Normalize(*stats,inplace=True)])
-´´´
+```
 
 Adding `tt.Resize( (150,150) )`  did. 
 Take care: `tt.Resize( (150,150) )` must be added to `tran_tfmd` and to `valid_tmfs`
