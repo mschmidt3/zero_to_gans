@@ -1,6 +1,8 @@
 ## Zero to GANs  Course Project
 
-**WORK IN PROGRSS**
+Status: **WORK IN PROGRSS**
+
+{:toc max_level=3 }.
 
 Links
 * https://mschmidt3.github.io/zero_to_gans/  - this file
@@ -90,4 +92,4 @@ Take care: `tt.Resize( (150,150) )` must be added to `tran_tfmd` and to `valid_t
 ### get better results.
 
 1. `tt.Normalize(*stats ...)` does not improve the result significantly
-1. adding another liniar layer did not have the the expected effect
+1. adding another linear layer did not have the the expected effect
