@@ -5,7 +5,7 @@
 Links
 * https://mschmidt3.github.io/zero_to_gans/  - this file
 * https://www.kaggle.com/mschmidt3/zero-to-gans-project - the kaggle notebook
-* [move to colab](move-to-colab.md)
+* [move-to-colab](move to colab)
 
 Selected Dataset: 
 * intel image classification
